@@ -1,0 +1,59 @@
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  database: currencies
+  username: root
+  password: parola123
+
+currencies:
+  testcurrency:
+    sign: "\\$"
+    shop:
+      title: "&cTestcurrency &ashop"
+      size: 54
+      filler: PURPLE_STAINED_GLASS_PANE
+      contents:
+        item1:
+          type: DIAMOND
+          name: "&cTest diamond"
+          amount: 64
+          lore:
+          - "&dTest"
+          - "&blore"
+          - "&cPrice: %price%%sign%"
+          price: 100
+
+shop:
+  no-money: "&cYou don't have enough money!"
+  no-space: "&cYou don't have enough space in your inventory!"
+  success: "&aSuccessfully bought %item% for &d%price%%sign%"
+
+no-perm: "&cYou don't have permission."
+invalid-player: "&cInvalid player!"
+invalid-currency: "&cInvalid currency!"
+invalid-number: "&cInvalid number!"
+
+balance:
+  usage: "&cUsage: /balance [currency]"
+  usage-admin: "&cUsage: /balance [currency] [OPTIONAL: player]"
+  success: "&eBalance for &d%currency%&e: &c%balance%%sign%"
+  success-admin: "&d%player%'s &ebalance for &d%currency%&e: &c%balance%%sign%"
+
+economy:
+  usage: "&cUsage: /economy [set|remove|add] [player] [currency] [amount]"
+  success:
+    add: "&aSuccessfully added &d%amount%%sign% &ato &c%player%'s &d%currency% &abalance."
+    set: "&aSuccessfully set &c%player%'s &d%currency% &abalance to &d%amount%%sign%."
+    remove: "&aSuccessfully removed &d%amount%%sign% &afrom &c%player%'s &d%currency% &abalance."
+  no-money: "&cAmount too high!"
+
+pay:
+  usage: "&cUsage: /pay [player] [amount] [currency]"
+  yourself: "&cYou cannot pay yourself. (lol)"
+  no-money: "&cYou don't have enough money!"
+  paid: "&7You sent &d%amount%%sign% &c(%currency%) &7to &d%player%"
+  receive: "&7You received &d%amount%%sign% &c(%currency%) &7from &d%player%"
+
+econpc:
+  usage: "&cUsage: /econpc shop [currency]"
+  success: "&aOpened &d%currency% &ashop..."

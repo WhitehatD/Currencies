@@ -1,0 +1,20 @@
+name: Currencies
+version: 1.0
+main: me.whitehatd.Currencies.Currencies
+author: WhitehatD
+api-version: 1.16
+commands:
+  balance:
+    description: Balance command
+    usage: /<command>
+    aliases: [bal]
+  economy:
+    description: Economy command.
+    usage: /<command>
+    aliases: [eco]
+  pay:
+    description: Pay command.
+    usage: /<command>
+  econpc:
+    description: Econpc command.
+    usage: /<command>
